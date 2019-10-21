@@ -15,6 +15,10 @@ class App extends Component {
     this.handleAddTimer()
   }
 
+  // shouldComponentUpdate(nextProps, nextState) {
+    
+  // }
+
   render() {
     console.log(this.state.timerIDs);
     return (
