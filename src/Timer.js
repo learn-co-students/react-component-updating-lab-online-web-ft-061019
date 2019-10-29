@@ -19,6 +19,19 @@ class Timer extends Component {
     );
   }
 
+  componentDidUpdate(){
+    this.timer.current.style.color = "#" +
+    Math.floor(Math.random() * 8675309).toString(16)
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.state.time === nextState.time){
+      return false
+    } else {
+      return true
+    }
+  }
+
   componentWillUnmount() {
     clearInterval(this.interval);
   }
